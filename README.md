@@ -1,4 +1,6 @@
-# Ruby on Rails Tutorial sample application
+# Ruby on Rails Microposts application
+
+Micropost is a web app that allows users to post and interact with short messages.
 
 ## Getting started
 
@@ -22,8 +24,9 @@ Finally, run the test suite to verify that everything is working correctly:
 $ rails test
 ```
 
-If the test suite passes, you'll be ready to run the app in a local server:
+If the test suite passes, you'll be ready to seed the database with users and run the app in a local server:
 
 ```
-$ rails
+$ rails db:seed
+$ rails server
 ```
