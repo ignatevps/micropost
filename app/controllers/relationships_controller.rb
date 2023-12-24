@@ -7,7 +7,7 @@ class RelationshipsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to @user }
       format.turbo_stream
-    end      
+    end 
   end
 
   def destroy
@@ -16,6 +16,6 @@ class RelationshipsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to @user, status: :see_other }
       format.turbo_stream
-    end   
+    end
   end
 end
