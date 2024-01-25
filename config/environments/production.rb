@@ -63,6 +63,19 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "sample_app_production"
 
   config.action_mailer.perform_caching = false
+  
+
+  config.action_mailer.default_url_options = { :host => 'https://micropost.onrender.com' }
+  # Email settings in production.
+  ActionMailer::Base.delivery_method = :smtp
+  ActionMailer::Base.smtp_settings = {
+    address:             'smtp.gmail.com',
+    port:                587,
+    domain:              'gmail.com',
+    authentication:      :plain,
+    user_name:           ENV["MAILER_EMAIL"],
+    password:            ENV["MAILER_PASSWORD"]
+  }
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
